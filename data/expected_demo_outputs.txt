@@ -1,0 +1,32 @@
+EXPECTED DEMONSTRATION RESULTS
+
+1) Load data/sample_logs.csv
+   Records loaded: 15
+   Duplicate IDs skipped: 0
+   Invalid rows skipped: 0
+
+2) Search for event ID 102
+   Timestamp: 2026-10-20 09:02:15
+   Source IP: 192.168.1.8
+   Severity: HIGH
+   Event: Failed login attempt
+
+3) Time-range query
+   Start: 2026-10-20 09:02:15
+   End:   2026-10-20 09:04:02
+   Expected event IDs, in chronological order: 102, 103, 104
+
+4) Repeated failed-login rule, minimum_attempts=3
+   Expected result: [('192.168.1.8', 5)]
+
+5) Import data/test_logs_with_duplicates.csv
+   Rows read: 7
+   Records loaded: 4
+   Duplicate IDs skipped: 1
+   Invalid rows skipped: 2
+   Expected IDs in the store: 201, 202, 203, 205
+
+6) Index check after loading either file
+   Expected: PASS (both B-Trees valid and indexes match stored records)
+
+Benchmark timings are not fixed expected values. They vary by machine and runtime; run the benchmark and use the actual output.

@@ -1,0 +1,16 @@
+event_id,timestamp,source_ip,severity,event
+101,2026-10-20 09:00:01,192.168.1.5,INFO,Successful login
+102,2026-10-20 09:02:15,192.168.1.8,HIGH,Failed login attempt
+103,2026-10-20 09:03:10,192.168.1.8,HIGH,Failed login attempt
+104,2026-10-20 09:04:02,192.168.1.9,MEDIUM,Connection rejected
+105,2026-10-20 09:05:30,192.168.1.5,INFO,User opened dashboard
+106,2026-10-20 09:07:45,192.168.1.12,ERROR,Application crashed
+107,2026-10-20 09:08:10,192.168.1.8,HIGH,Failed login attempt
+108,2026-10-20 09:10:00,192.168.1.15,INFO,File access granted
+109,2026-10-20 09:10:00,192.168.1.8,HIGH,Failed login attempt
+110,2026-10-20 09:12:23,192.168.1.5,MEDIUM,Connection reset
+111,2026-10-20 09:15:00,192.168.1.20,INFO,Service started
+112,2026-10-20 09:18:44,192.168.1.9,ERROR,Disk warning detected
+113,2026-10-20 09:20:12,192.168.1.8,HIGH,Failed login attempt
+114,2026-10-20 09:21:01,192.168.1.5,INFO,Successful logout
+115,2026-10-20 09:25:40,192.168.1.30,MEDIUM,Connection rejected

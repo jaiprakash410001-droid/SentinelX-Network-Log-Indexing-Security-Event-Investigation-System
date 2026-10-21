@@ -1,0 +1,8 @@
+event_id,timestamp,source_ip,severity,event
+201,2026-10-20 09:00:00,10.0.0.1,INFO,Service started
+202,2026-10-20 09:01:00,10.0.0.2,HIGH,Failed login attempt
+202,2026-10-20 09:01:00,10.0.0.2,HIGH,Failed login attempt
+203,2026-10-20 09:01:00,10.0.0.3,MEDIUM,Connection rejected
+BAD_ID,2026-10-20 09:02:00,10.0.0.4,ERROR,Malformed event ID
+204,,10.0.0.5,INFO,Timestamp missing
+205,2026-10-20 09:05:00,10.0.0.6,INFO,User logged out

@@ -1,0 +1,10 @@
+Expected result when loading test_logs_with_duplicates.csv
+
+Rows read: 7
+Records loaded: 4
+Duplicate IDs skipped: 1
+Invalid rows skipped: 2
+
+Expected event IDs loaded in storage: 201, 202, 203, 205
+Event IDs must be unique in the B-Tree index.
+Events 202 and 203 share the same timestamp and both must still be retrievable.
