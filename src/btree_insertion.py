@@ -13,6 +13,7 @@ class BTreeInsertionMixin:
     # Time complexity: O(log n): check for an existing key and insert along a path, splitting as needed.
     def insert(self, key: Any, value: Any) -> bool:
         """Insert key/value. Update an existing key; return True only if new."""
+        self._metrics["insert_calls"] += 1
         existing = self.search_item(key)
         if existing is not None:
             existing[0].values[existing[1]] = value
@@ -25,6 +26,7 @@ class BTreeInsertionMixin:
             self._split_child(new_root, 0)
             self.root = new_root
         self._insert_non_full(self.root, key, value)
+        self._size += 1
         return True
 
     # Time complexity: O(log n): descend one root-to-leaf path; t is fixed.
@@ -47,6 +49,7 @@ class BTreeInsertionMixin:
     # Time complexity: O(t), or O(1) for this implementation with fixed minimum degree t.
     def _split_child(self, parent: BTreeNode, index: int) -> None:
         """Split a full child of parent at child index."""
+        self._metrics["splits"] += 1
         degree = self.t
         full_child = parent.children[index]
         right = BTreeNode(leaf=full_child.leaf)
